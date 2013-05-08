@@ -7,7 +7,7 @@
 %
 %   The resultant factor should have at least one variable remaining or this
 %   function will throw an error.
-% 
+%
 %   See also FactorProduct.m, IndexToAssignment.m, and AssignmentToIndex.m
 
 function B = FactorMarginalization(A, V)
@@ -38,6 +38,8 @@ indxB = AssignmentToIndex(assignments(:, mapB), B.card);
 % YOUR CODE HERE
 % Correctly populate the factor values of B
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+
+B.val = accumarray(indxB, A.val);
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end
